@@ -1,0 +1,9 @@
+version: '2'
+services:
+  ynu-imp-api:
+    build: .
+    ports:
+      - "50091:3000"
+    restart: always
+    env_file:
+      - ./.env
