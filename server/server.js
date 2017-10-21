@@ -5,10 +5,12 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+// https://apidocs.strongloop.com/loopback/#loopback-token
 app.use(loopback.token({
   model: app.models.accessToken,
   currentUserLiteral: 'me',
-  bearerTokenBase64Encoded: false // here
+  bearerTokenBase64Encoded: false,
+  params: ['token'],
 }));
 
 app.start = function() {
