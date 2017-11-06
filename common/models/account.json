@@ -71,7 +71,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "imp",
       "permission": "ALLOW"
     }
   ],
